@@ -1,0 +1,28 @@
+{
+  "skipServer": true,
+  "fields": [
+    {
+      "fieldName": "descricao",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "situacao",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [],
+  "readOnly": false,
+  "pagination": "pagination",
+  "name": "ProfissionalTipo",
+  "changelogDate": "20211115133714"
+}

@@ -1,0 +1,48 @@
+{
+  "skipServer": true,
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "telefone",
+      "fieldType": "String",
+      "fieldValidateRules": ["pattern"],
+      "fieldValidateRulesPattern": "(^(\\(\\d{2}\\))\\s(\\d{4,5}(\\-)?\\d{4})$)"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["pattern"],
+      "fieldValidateRulesPattern": "(^[a-z0-9.]+@([a-z0-9]+)(\\.[a-z0-9]+)*$)"
+    },
+    {
+      "fieldName": "situacao",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipName": "profissionalTipo",
+      "otherEntityName": "profissionalTipo",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "descricao"
+    }
+  ],
+  "readOnly": false,
+  "pagination": "pagination",
+  "name": "Profissional",
+  "changelogDate": "20211115161443"
+}

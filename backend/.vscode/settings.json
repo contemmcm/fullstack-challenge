@@ -1,0 +1,28 @@
+{
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+    },
+    "editor.minimap.maxColumn": 80,
+    "html.format.wrapAttributes": "preserve-aligned",
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "files.trimTrailingWhitespace": true,
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true
+    }
+}
