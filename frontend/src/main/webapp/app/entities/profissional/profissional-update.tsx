@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col, FormText } from 'reactstrap';
-import { isNumber, ValidatedField, ValidatedForm } from 'react-jhipster';
+import { ValidatedField, ValidatedForm } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { IProfissionalTipo } from 'app/shared/model/profissional-tipo.model';
 import { getEntities as getProfissionalTipos } from 'app/entities/profissional-tipo/profissional-tipo.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './profissional.reducer';
-import { IProfisional } from 'app/shared/model/profisional.model';
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
-import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 export const ProfisionalUpdate = (props: RouteComponentProps<{ id: string }>) => {

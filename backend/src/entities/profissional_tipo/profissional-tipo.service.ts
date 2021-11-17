@@ -21,9 +21,9 @@ export class ProfissionalTipoService {
   }
 
   async findPage(query: any): Promise<EntityPagination<ProfissionalTipo>> {
-    const take = parseInt(query.take) || 10;
-    const page = parseInt(query.page) || 1;
-    const skip = (page - 1) * take;
+    const take = parseInt(query.take) || 100;
+    const page = parseInt(query.page) || 0;
+    const skip = page * take;
 
     const order = {};
 

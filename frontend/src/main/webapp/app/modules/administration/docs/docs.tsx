@@ -5,7 +5,7 @@ import React from 'react';
 const DocsPage = () => (
   <div>
     <iframe
-      src="../swagger-ui/index.html"
+      src="/swagger-resources/"
       width="100%"
       height="800"
       title="Swagger UI"

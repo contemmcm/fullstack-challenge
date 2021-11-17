@@ -13,9 +13,9 @@ export class AppController {
   @Get('/management/info')
   getManagementInfo() {
     return {
-      'display-ribbon-on-profiles': 'dev',
+      'display-ribbon-on-profiles': '',
       git: {},
-      activeProfiles: ['dev'],
+      activeProfiles: null,
     };
   }
 }
