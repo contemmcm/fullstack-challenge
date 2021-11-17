@@ -13,6 +13,8 @@
  - ReactJS
  - JHipster
 
-## Instruções de Uso (Docker)
+## Instruções de Uso (docker-compose)
 
- - TODO
+```bash
+docker-compse up
+```
