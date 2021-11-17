@@ -1,0 +1,35 @@
+DUMP_FILE="sql/fixtures.backup"
+PGHOST_DEFAULT="localhost"
+PGDATABASE_DEFAULT="maxxidata"
+PGUSER_DEFAULT="maxxidata"
+PGPASSWORD_DEFAULT="maxxidata"
+PGPORT_DEFAULT="5432"
+
+if [ ! -v PGDATABASE ]
+then
+    export PGDATABASE=$PGDATABASE_DEFAULT
+fi
+
+if [ ! -v PGUSER ]
+then
+    export PGUSER=$PGUSER_DEFAULT
+fi
+
+if [ ! -v PGPASSWORD ]
+then
+    export PGPASSWORD=$PGPASSWORD_DEFAULT
+fi
+
+if [[ -v DB_HOST ]]
+then
+    export PGHOST=$DB_HOST
+else
+    export PGHOST=$PGHOST_DEFAULT
+fi
+
+if [[ -v DB_PORT ]]
+then
+    export PGPORT=$DB_PORT
+else
+    export PGPORT=$PGPORT_DEFAULT
+fi

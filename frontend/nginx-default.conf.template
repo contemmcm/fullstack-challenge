@@ -1,0 +1,26 @@
+server {
+    listen 80;
+    index index.html;
+    error_log  /var/log/nginx/error.log;
+
+    root /var/www/localhost/target/classes/static;
+
+    location /api {
+        proxy_pass ${BACKEND_API_URL}/api;
+    }
+    location /management {
+        proxy_pass ${BACKEND_API_URL}/management;
+    }
+    location /swagger-resources {
+        proxy_pass ${BACKEND_API_URL}/swagger-resources;
+    }
+    location /v2 {
+       proxy_pass ${BACKEND_API_URL}/v2;
+    }
+    location /auth {
+       proxy_pass ${BACKEND_API_URL}/auth;
+    }
+    location / {
+        try_files $uri $uri/ /index.html =404;
+    }
+}

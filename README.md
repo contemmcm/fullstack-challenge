@@ -16,5 +16,12 @@
 ## Instruções de Uso (docker-compose)
 
 ```bash
-docker-compse up
+docker-compose build
+docker-compose up
+```
+
+Para carregar as fixtures, execute o seguinte comando (em outro terminal):
+
+```bash
+docker-compose exec backend ./sql/db_restore.sh
 ```
